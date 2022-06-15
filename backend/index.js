@@ -10,9 +10,9 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
     res.send('<center><h1>Welcome to CryptoNaukri Backend</h1>' +
-        '<h3><a href="https://github.com/prasoonsoni/Phone-and-Mail-Verification-With-Link" target="_blank">Visit Repository</a></h3></center>')
+        '<h3><a href="https://github.com/prasoonsoni/CryptoNaukri-Task" target="_blank">Visit Repository</a></h3></center>')
 })
 
 app.listen(port, () => {
-    console.log(`CryptoNaukri listening on http://localhost:${port}`)
+    console.log(`CryptoNaukri Backend listening on http://localhost:${port}`)
 })
