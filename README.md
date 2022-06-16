@@ -36,6 +36,15 @@
   </a>
 </p>
 
+
+## <img src="https://cdn-icons-png.flaticon.com/512/4661/4661245.png" width="32" height="32"> Backend Documantation
+  <a href="https://app.getpostman.com/run-collection/539f109c2e7ee05f21c1?action=collection%2Fimport">
+    <img src="https://run.pstmn.io/button.svg">
+  </a>
+  <a href="https://app.swaggerhub.com/apis/prasoonsoni/NaukriDundho/1">
+    <img src="https://miro.medium.com/max/690/1*aKVg84SP5oPV9fwOnbl6yQ.png" height="32px">
+  </a>
+
 <!-- ABOUT THE PROJECT -->
 <!-- ## <img src="https://openclipart.org/download/307315/1538154643.svg" width="32" height="32"> About The Project
 URL Shortner is a web app which can help you to get rid of long URLs, shorten them and share them with your friends. -->
