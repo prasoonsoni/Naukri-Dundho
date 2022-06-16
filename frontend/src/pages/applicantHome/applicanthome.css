@@ -15,3 +15,94 @@
     color: #D6D5A8;
     width: fit-content;
 }
+
+.job-card{
+    background-color: #263446;
+    margin: 20px;
+    width: 550px;
+    height: fit-content;
+    border-radius: 40px;
+}
+
+.job-title{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.job-description{
+    margin: 0;
+    overflow-wrap: break-word;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 1.2rem;
+    color: #D6D5A8;
+}
+
+.job-salary{
+    margin: 0;
+    overflow-wrap: break-word;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+    font-size: 1rem;
+    color: gray;
+
+}
+
+.job-delete{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.job-delete:hover{
+    color: gray;
+}
+
+.logout{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.logout:hover{
+    color: gray;
+}
+
+@media only screen and (max-width: 605px) {
+    .job-card{
+        width: 400px;
+    }
+    .logout{
+        display: flex;
+         position: relative;
+        bottom: 50px;
+        top: 0;
+        right: 0; 
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .job-card{
+        width: 300px;
+    }
+    
+}
+
+

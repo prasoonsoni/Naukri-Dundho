@@ -3,6 +3,7 @@ const router = express.Router()
 const jobController = require('../controllers/jobController')
 const fetchUser = require('../middleware/fetchUser')
 
+router.get('/all', jobController.getAllJobs)
 router.get('/:id', jobController.getJobById)
 router.get('/', fetchUser, jobController.getJobByCompany)
 router.post('/', fetchUser, jobController.postJob)

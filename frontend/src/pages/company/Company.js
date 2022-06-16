@@ -5,6 +5,7 @@ import Loading from '../../components/loading/Loading';
 import MuiAlert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../../components/logo/Logo';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -100,11 +101,12 @@ const Company = () => {
         }
         setSnackbarStatus({ open: true, message: "Successfully logged in.", severity: "success" })
         sessionStorage.setItem("auth-token", json.token)
-        navigate('/company/home')
+        navigate('/company/home', { replace: true })
     }
 
     return (
         <>
+            <Logo />
             <Snackbar open={snackbarStatus.open} autoHideDuration={2000} onClose={handleClose} anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}>
                 <Alert onClose={handleClose} severity={snackbarStatus.severity} sx={{ width: '100%' }}>
                     {snackbarStatus.message}

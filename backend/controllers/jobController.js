@@ -4,6 +4,18 @@ const Applicant = require('../models/Applicant')
 const Company = require('../models/Company')
 const Job = require('../models/Job')
 
+const getAllJobs = async (req, res) => {
+    try {
+        const jobs = await Job.find({})
+        if (!jobs) {
+            return res.json({ success: false, message: "No Jobs Available" })
+        }
+        res.json({ success: true, data: jobs })
+    } catch (error) {
+        console.log(error.message)
+        res.json({ status: "error", message: "Some internal server error occured." })
+    }
+}
 const postJob = async (req, res) => {
     try {
         const company_id = new ObjectId(req.user.id)
@@ -115,4 +127,4 @@ const applyForJob = async (req, res) => {
     }
 }
 
-module.exports = { postJob, getJobById, getJobByCompany, updateJob, deleteJob, applyForJob }
+module.exports = { postJob, getJobById, getJobByCompany, updateJob, deleteJob, applyForJob, getAllJobs }

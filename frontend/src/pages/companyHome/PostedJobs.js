@@ -27,7 +27,7 @@ const PostedJobs = () => {
             {jobs.length !== 0 &&
                 <div className='job-card-container'>
                     {jobs.map((job) => {
-                        return <Job title={job.title} description={job.description} salary={job.salary} id={job._id} key={job._id} />
+                        return <Job title={job.title} description={job.description} salary={job.salary} id={job._id} key={job._id} applicants={job.applicants} />
                     })}
                 </div>
             }

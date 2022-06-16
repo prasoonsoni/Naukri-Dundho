@@ -25,7 +25,6 @@ const registerUser = async (req, res) => {
             if (!account) {
                 return res.json({ success: false, message: "Error creating account. Try Again!!" })
             }
-            console.log(account)
             return res.json({ success: true, message: "Account created successfully" })
         } else if (type === "company") {
             const userEmail = await Company.findOne({ email: email });
@@ -43,7 +42,6 @@ const registerUser = async (req, res) => {
             if (!account) {
                 return res.json({ success: false, message: "Error creating account. Try Again!!" })
             }
-            console.log(account)
             return res.json({ success: true, message: "Account created successfully" })
         }
     } catch (error) {
