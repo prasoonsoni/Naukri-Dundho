@@ -8,7 +8,11 @@ const ApplicantSchema = new Schema({
         type: String,
         unique: true
     },
-    password: String
+    password: String,
+    applied_for:{
+        type:[Schema.Types.ObjectId],
+        default:[]
+    }
 })
 
 module.exports = mongoose.model('Applicant', ApplicantSchema)

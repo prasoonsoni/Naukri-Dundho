@@ -9,6 +9,10 @@ const JobSchema = new Schema({
     applicants: {
         type: [Schema.Types.ObjectId],
         default: []
+    },
+    posted_time: {
+        type: Date,
+        default: Date.now
     }
 })
 

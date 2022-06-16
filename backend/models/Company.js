@@ -8,7 +8,11 @@ const CompanySchema = new Schema({
         type: String,
         unique: true
     },
-    password: String
+    password: String,
+    posted_jobs:{
+        type:[Schema.Types.ObjectId],
+        default:[]
+    }
 })
 
 module.exports = mongoose.model('Company', CompanySchema)

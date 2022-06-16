@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
         '<h3><a href="https://github.com/prasoonsoni/CryptoNaukri-Task" target="_blank">Visit Repository</a></h3></center>')
 })
 
+app.use('/user', require('./routes/userRoutes'))
+app.use('/job', require('./routes/jobRoutes'))
+
 app.listen(port, () => {
     console.log(`CryptoNaukri Backend listening on http://localhost:${port}`)
 })
