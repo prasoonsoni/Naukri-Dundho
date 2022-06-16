@@ -1,9 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Banner from '../../banner/Banner'
-import Button from '../../button/Button'
-import Tagline from '../../tagline/Tagline'
-import Title from '../../title/Title'
+import Title from '../../components/title/Title'
+import Tagline from '../../components/tagline/Tagline'
+import Banner from '../../components/banner/Banner'
+import Button from '../../components/button/Button'
+
 import './landing.css'
 const Landing = () => {
   const navigate = useNavigate()

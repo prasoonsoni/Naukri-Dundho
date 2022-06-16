@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Landing from './components/pages/landing/Landing';
-import Company from './components/pages/company/Company';
-import Applicant from './components/pages/applicant/Applicant';
+import Landing from './pages/landing/Landing';
+import Company from './pages/company/Company';
+import Applicant from './pages/applicant/Applicant';
+import CompanyHome from './pages/companyHome/CompanyHome';
+import ApplicantHome from './pages/applicantHome/ApplicantHome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +16,8 @@ root.render(
         <Route path='/' element={<Landing />} />
         <Route path='/company' element={<Company />} />
         <Route path='/applicant' element={<Applicant />} />
+        <Route path='/company/home' element={<CompanyHome />} />
+        <Route path='/applicant/home' element={<ApplicantHome />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

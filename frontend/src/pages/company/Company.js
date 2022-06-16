@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import Loading from '../../loading/Loading'
-import Login from '../../login/Login'
-import Register from '../../register/Register'
+import React, { useState, useEffect } from 'react'
+import Login from '../../components/login/Login'
+import Register from '../../components/register/Register'
+import Loading from '../../components/loading/Loading';
 import MuiAlert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
+import { useNavigate } from 'react-router-dom';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -11,11 +12,22 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 
 const BASE_URL = process.env.REACT_APP_BASE_URL
 
-const Applicant = () => {
+const Company = () => {
     const [showLogin, setShowLogin] = useState(true)
     const [showRegister, setShowRegister] = useState(false)
     const [loading, setLoading] = useState(false)
     const [snackbarStatus, setSnackbarStatus] = useState({ severity: "", open: false, message: "" })
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (sessionStorage.getItem('auth-token')) {
+            setTimeout(() => {
+                navigate("/company/home");
+            }, 500);
+        }
+
+    }, [])
+
     const forLogin = () => {
         setShowLogin(false)
         setShowRegister(true)
@@ -50,7 +62,7 @@ const Applicant = () => {
                 "name": name,
                 "description": description,
                 "password": password,
-                "type": "applicant"
+                "type": "company"
             }),
         });
         const json = await response.json();
@@ -77,7 +89,7 @@ const Applicant = () => {
             body: JSON.stringify({
                 "email": email,
                 "password": password,
-                "type": "applicant"
+                "type": "company"
             }),
         });
         const json = await response.json();
@@ -88,6 +100,7 @@ const Applicant = () => {
         }
         setSnackbarStatus({ open: true, message: "Successfully logged in.", severity: "success" })
         sessionStorage.setItem("auth-token", json.token)
+        navigate('/company/home')
     }
 
     return (
@@ -98,11 +111,10 @@ const Applicant = () => {
                 </Alert>
             </Snackbar>
             {loading && <Loading />}
-            {showLogin && <Login heading='LOGIN' for='Applicant' onEndClick={forLogin} onLoginClick={onLoginClick} />}
-            {showRegister && <Register heading='REGISTER' for='Applicant' onEndClick={forRegister} onRegisterClick={onRegisterClick} />}
-
+            {showLogin && <Login heading='LOGIN' for='Company' onEndClick={forLogin} onLoginClick={onLoginClick} />}
+            {showRegister && <Register heading='REGISTER' for='Company' onEndClick={forRegister} onRegisterClick={onRegisterClick} />}
         </>
     )
 }
 
-export default Applicant
+export default Company
