@@ -1,0 +1,13 @@
+.title{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6rem;
+    color: #D6D5A8;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 900px) {
+    .title{
+        font-size: 4rem;
+    }
+}

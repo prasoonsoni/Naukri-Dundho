@@ -1,0 +1,15 @@
+.tagline{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #816797;
+    font-size: 2rem;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 900px) {
+    .tagline{
+        font-size: 1.5rem;
+    }
+}

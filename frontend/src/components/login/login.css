@@ -1,0 +1,39 @@
+.main-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    /* background-color: #51557E; */
+    border-radius: 40px;
+}
+.end-text{
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.end-link{
+    font-family: 'Montserrat', sans-serif;
+    color: #51557E;
+    font-size: 1.2rem;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+
+.end-link:hover{
+    color: #D6D5A8;
+}
+
+.for{
+    margin: 0;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
