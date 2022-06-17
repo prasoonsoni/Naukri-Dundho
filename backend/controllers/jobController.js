@@ -127,4 +127,22 @@ const applyForJob = async (req, res) => {
     }
 }
 
-module.exports = { postJob, getJobById, getJobByCompany, updateJob, deleteJob, applyForJob, getAllJobs }
+const getApplicants = async (req, res) => {
+    try {
+        const job_id = new ObjectId(req.params.id)
+        const job = await Job.findOne({ _id: job_id })
+        const applicants = job.applicants
+        const applicantsData = []
+        for (let i = 0; i < applicants.length; i++) {
+            const applicant_id = applicants[i];
+            const applicant = await Applicant.findOne({ _id: applicant_id }).select('-password').select('-applied_for')
+            applicantsData.push(applicant)
+        }
+        res.json({ success: true, data: applicantsData })
+    } catch (error) {
+        console.log(error.message)
+        res.json({ status: "error", message: "Some internal server error occured." })
+    }
+}
+
+module.exports = { postJob, getJobById, getJobByCompany, updateJob, deleteJob, applyForJob, getAllJobs, getApplicants }

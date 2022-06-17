@@ -114,6 +114,56 @@
     color: gray;
 }
 
+.backdrop{
+    display: flex;
+    flex-direction: column;
+}
+.applicant-card{
+    background-color: #D6D5A8;
+    margin: 20px;
+    width: 550px;
+    height: fit-content;
+    border-radius: 40px;
+}
+
+.applicant-name{
+    color: #263446;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+}
+.applicant-description{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin-top: 8px;
+    overflow-wrap: break-word;
+}
+.applicant-email{
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.applicants-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.close{
+    color: #D6D5A8;
+    font-size: 3rem;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.close:hover{
+    color: #51557E;
+}
+
 @media only screen and (max-width: 605px) {
     .job-card{
         width: 400px;
@@ -124,6 +174,9 @@
         bottom: 50px;
         top: 0;
         right: 0; 
+    }
+    .applicant-card{
+        width: 300px;
     }
 }
 @media only screen and (max-width: 470px) {
