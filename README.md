@@ -37,7 +37,7 @@
 </p>
 
 
-## <img src="https://cdn-icons-png.flaticon.com/512/4661/4661245.png" width="32" height="32"> Backend Documantation
+## <img src="https://cdn-icons-png.flaticon.com/512/4661/4661245.png" width="32" height="32"> Backend Documentation
   <a href="https://app.getpostman.com/run-collection/539f109c2e7ee05f21c1?action=collection%2Fimport">
     <img src="https://run.pstmn.io/button.svg">
   </a>
